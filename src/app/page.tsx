@@ -200,7 +200,7 @@ export default async function HomePage() {
       </section>
 
       {/* ========================================================
-          5. FAQ SECTION: CÂU HỎI THƯỜNG GẶP
+          5. FAQ SECTION: CÂU HỎI THƯỜNG GẶP (Học tập bản cũ)
          ======================================================== */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-neutral-900">
         <div className="text-center mb-16 space-y-4">
@@ -210,21 +210,35 @@ export default async function HomePage() {
 
         <div className="mx-auto max-w-3xl space-y-6">
           <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
-            <h3 className="text-sm sm:text-base font-bold text-neutral-100">1. Làm thế nào để mở khóa xem số điện thoại đầy đủ?</h3>
+            <h3 className="text-sm sm:text-base font-bold text-neutral-100">1. Tôi sinh năm khác 1981 có tham gia được không?</h3>
+            <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
+              Rất tiếc, hiện tại cộng đồng này **chỉ dành riêng cho tuổi Tân Dậu 1981** nhằm đảm bảo sự đồng điệu, uy tín tuyệt đối và chắp cánh tình đồng niên tương trợ lẫn nhau.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
+            <h3 className="text-sm sm:text-base font-bold text-neutral-100">2. Làm thế nào để mở khóa xem số điện thoại đầy đủ?</h3>
             <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
               Bạn chỉ cần điền đơn đăng ký thành viên trên trang web này. Sau khi Ban quản trị duyệt hồ sơ thành công, trên trang web sẽ có nút bấm để bạn liên kết tài khoản Messenger trong 1 giây. Từ đó về sau, bạn sẽ xem được đầy đủ số điện thoại của tất cả các đồng đội khác khi tra cứu trên Bot.
             </p>
           </div>
 
           <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
-            <h3 className="text-sm sm:text-base font-bold text-neutral-100">2. Tôi có thể đăng ký nhiều ngành nghề kinh doanh được không?</h3>
+            <h3 className="text-sm sm:text-base font-bold text-neutral-100">3. Làm thế nào để tôi biết đối tác kinh doanh là uy tín?</h3>
             <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
-              Hoàn toàn được. Trong form đăng ký, ngoài ngành nghề chính, bạn có thể điền thêm các ngành nghề phụ và các sản phẩm/dịch vụ chi tiết khác để trợ lý AI ghi nhận và ưu tiên giới thiệu bạn cho các nhu cầu phù hợp.
+              Chúng tôi có hệ thống đánh giá sao (⭐⭐⭐⭐⭐) dựa trên tích điểm hoạt động thực tế. Dấu tích vàng Verified khẳng định thành viên đã được Ban quản trị xác minh danh tính và đóng góp cho quỹ hoạt động của cộng đồng.
             </p>
           </div>
 
           <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
-            <h3 className="text-sm sm:text-base font-bold text-neutral-100">3. Thông tin cá nhân của tôi được bảo vệ như thế nào?</h3>
+            <h3 className="text-sm sm:text-base font-bold text-neutral-100">4. Giao dịch mua bán trên này có an toàn không?</h3>
+            <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
+              Kim Kê Connect đóng vai trò là mạng lưới kết nối giúp đồng đội tìm thấy nhau. Mọi giao dịch, thanh toán sẽ do hai bên tự liên hệ trao đổi trực tiếp qua Zalo/Messenger cá nhân. Hãy ưu tiên giao dịch với các thành viên có nhãn Verified và điểm uy tín cao.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
+            <h3 className="text-sm sm:text-base font-bold text-neutral-100">5. Thông tin cá nhân của tôi được bảo vệ như thế nào?</h3>
             <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
               Website của chúng tôi được thiết kế với cơ chế bảo mật phân quyền cấp cột cao cấp. Hacker hay các robot cào quét số điện thoại công khai trên mạng sẽ bị chặn hoàn toàn. Số điện thoại của bạn chỉ được mã hóa và hiển thị đối với những đồng đội Tân Dậu 1981 thực thụ đã được xác minh danh tính.
             </p>
@@ -232,10 +246,83 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-neutral-900 py-8 text-center text-xs text-neutral-600">
-        <p className="font-medium">🐓 Kim Kê AI Network - Mạng lưới giao thương nội bộ Tân Dậu 1981</p>
-        <p className="mt-1">Thiết kế bởi các đồng đội Tân Dậu vì sự thịnh vượng của tập thể.</p>
+      {/* ========================================================
+          📍 SECTION OFFICE: VĂN PHÒNG ĐIỀU HÀNH (Học tập bản cũ)
+         ======================================================== */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-neutral-900 text-center">
+        <div className="max-w-3xl mx-auto space-y-4 mb-12">
+          <span className="inline-block bg-neutral-900 border border-neutral-800 p-3 rounded-full text-amber-400">
+            📍
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-black text-neutral-100">Văn Phòng Điều Hành</h2>
+          <p className="text-xs sm:text-sm text-neutral-450">Tổ 30, Phường Quan Triều, Thành phố Thái Nguyên</p>
+        </div>
+        
+        <div className="rounded-3xl overflow-hidden shadow-2xl border border-neutral-850 h-[320px] sm:h-[400px] relative max-w-5xl mx-auto">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.893111069348!2d105.8130109759247!3d21.62145406471371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135270116631627%3A0x600c6553a835a83a!2zVOG7lSAzMCwgUXVhbiBUcmnhu4F1LCBUaMOgbmggcGjhu5EgVGjDoWkgTmd1ecOqbiwgVGjDoWkgTmd1ecOqbiwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1717145561139!5m2!1svi!2s"
+            className="w-full h-full absolute inset-0 bg-neutral-900 border-0"
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Bản đồ vị trí văn phòng Tân Dậu - Hỗ Trợ Chéo"
+          ></iframe>
+        </div>
+      </section>
+
+      {/* ========================================================
+          👣 FOOTER CHI TIẾT & UY TÍN (Học tập bản cũ)
+         ======================================================== */}
+      <footer className="border-t border-neutral-900 bg-neutral-950/60 py-16 text-xs text-neutral-400">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+          
+          {/* Cột 1: Giới thiệu */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🐓</span>
+              <span className="text-sm font-bold text-neutral-200 uppercase tracking-wider">Kim Kê Connect</span>
+            </div>
+            <p className="text-neutral-500 leading-relaxed">
+              Mạng lưới kết nối giao thương và hỗ trợ chéo thông minh dành riêng cho cộng đồng người sinh năm Tân Dậu 1981.
+            </p>
+            <p className="text-[10px] text-neutral-600">
+              &copy; {new Date().getFullYear()} Tân Dậu - Hỗ Trợ Chéo. All rights reserved.
+            </p>
+          </div>
+
+          {/* Cột 2: Thông tin liên hệ Ban Quản Trị */}
+          <div className="space-y-3">
+            <h5 className="text-neutral-200 font-bold uppercase tracking-wider text-[10px]">Ban Quản Trị</h5>
+            <ul className="space-y-2 text-neutral-500">
+              <li>• <span className="font-semibold text-neutral-400">Đại diện:</span> Đinh Khánh Tùng</li>
+              <li>• <span className="font-semibold text-neutral-400">Hotline:</span> <a href="tel:0982581222" className="hover:text-amber-400 transition-colors">0982.581.222</a></li>
+              <li>• <span className="font-semibold text-neutral-400">Email:</span> dinhkhanhtung@outlook.com</li>
+            </ul>
+          </div>
+
+          {/* Cột 3: Liên kết nhanh */}
+          <div className="space-y-3">
+            <h5 className="text-neutral-200 font-bold uppercase tracking-wider text-[10px]">Cộng Đồng</h5>
+            <ul className="space-y-2 text-neutral-500">
+              <li>
+                • <a href="https://m.me/2571120902929642" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                  Messenger AI Chatbot
+                </a>
+              </li>
+              <li>
+                • <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                  Facebook Group Cộng Đồng 1981
+                </a>
+              </li>
+              <li>
+                • <a href="https://zalo.me/0982581222" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                  Zalo Hỗ Trợ Trực Tiếp
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
       </footer>
     </div>
   );
