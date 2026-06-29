@@ -83,21 +83,40 @@ export default function Testimonials() {
               </div>
             </div>
 
-            {/* Nút chuyển đổi trái/phải */}
+            {/* Nút chuyển đổi trái/phải - Chỉ hiển thị trên Desktop */}
             <button 
               onClick={prevSlide} 
-              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-neutral-950/40 hover:bg-neutral-950/80 border border-neutral-800 text-neutral-300 hover:text-amber-400 transition-all text-sm sm:text-lg"
+              className="absolute -left-4 sm:left-4 top-1/2 -translate-y-1/2 hidden sm:flex p-2 rounded-full bg-neutral-950/40 hover:bg-neutral-950/80 border border-neutral-800 text-neutral-300 hover:text-amber-400 transition-all text-lg"
               aria-label="Previous slide"
             >
               ◀
             </button>
             <button 
               onClick={nextSlide} 
-              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-neutral-950/40 hover:bg-neutral-950/80 border border-neutral-800 text-neutral-300 hover:text-amber-400 transition-all text-sm sm:text-lg"
+              className="absolute -right-4 sm:right-4 top-1/2 -translate-y-1/2 hidden sm:flex p-2 rounded-full bg-neutral-950/40 hover:bg-neutral-950/80 border border-neutral-800 text-neutral-300 hover:text-amber-400 transition-all text-lg"
               aria-label="Next slide"
             >
               ▶
             </button>
+
+            {/* Chỉ hiển thị bộ chuyển đổi nhỏ gọn ở dưới cùng trên mobile */}
+            <div className="flex sm:hidden justify-center items-center gap-6 mt-6 border-t border-neutral-850/60 pt-4">
+              <button 
+                type="button"
+                onClick={prevSlide} 
+                className="w-8 h-8 rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 active:text-amber-400 active:border-amber-500/30 transition-all"
+              >
+                ◀
+              </button>
+              <span className="text-[10px] font-bold text-neutral-500">{currentIndex + 1} / {testimonialsData.length}</span>
+              <button 
+                type="button"
+                onClick={nextSlide} 
+                className="w-8 h-8 rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 active:text-amber-400 active:border-amber-500/30 transition-all"
+              >
+                ▶
+              </button>
+            </div>
           </div>
         </div>
       </div>

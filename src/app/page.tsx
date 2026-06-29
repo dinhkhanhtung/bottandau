@@ -59,17 +59,17 @@ export default async function HomePage() {
                 Nền tảng độc quyền giúp các bạn Tân Dậu 1981 hỗ trợ chéo sản phẩm dịch vụ, xây dựng mạng lưới kinh doanh bền vững dựa trên sự tin cậy, đồng điệu và trợ lực từ Trí Tuệ Nhân Tạo (AI).
               </p>
               
-              {/* Hai nút thẳng hàng nhau trên di động */}
-              <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:gap-4 justify-center lg:justify-start max-w-xs sm:max-w-none mx-auto lg:mx-0 pt-2">
+              {/* Hai nút thẳng hàng nhau, chia đều flex-1 trên di động để không bị méo lệch */}
+              <div className="flex gap-3 justify-center lg:justify-start max-w-md mx-auto lg:mx-0 pt-2 w-full">
                 <a 
                   href="/dang-ky" 
-                  className="group relative overflow-hidden py-3.5 px-4 sm:px-8 bg-amber-500 hover:bg-amber-400 text-neutral-950 rounded-2xl font-black text-[10px] sm:text-sm shadow-lg shadow-amber-500/10 transition-all hover:scale-103 text-center whitespace-nowrap"
+                  className="flex-1 sm:flex-initial py-3.5 px-6 sm:px-8 bg-amber-500 hover:bg-amber-400 text-neutral-950 rounded-2xl font-black text-xs sm:text-sm shadow-lg shadow-amber-500/10 transition-all hover:scale-102 text-center whitespace-nowrap"
                 >
                   Tham Gia Ngay
                 </a>
                 <a 
-                  href="#about"
-                  className="py-3.5 px-4 sm:px-8 bg-neutral-900 text-neutral-200 border border-neutral-800 rounded-2xl font-bold text-[10px] sm:text-sm hover:bg-neutral-800 transition-all text-center whitespace-nowrap"
+                  href="#features"
+                  className="flex-1 sm:flex-initial py-3.5 px-6 sm:px-8 bg-neutral-900 text-neutral-200 border border-neutral-800 rounded-2xl font-bold text-xs sm:text-sm hover:bg-neutral-850 transition-all text-center whitespace-nowrap"
                 >
                   Tìm hiểu thêm
                 </a>
@@ -175,16 +175,18 @@ export default async function HomePage() {
           {/* Layout Bento Grid đan xen thời thượng, gom hiển thị đẹp của web mới */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Feature 1: Chợ Tân Dậu (Bản cũ) - col-span-1 */}
-            <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
-                🏪
+            <div className="flex flex-col justify-between h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left gap-4">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
+                  🏪
+                </div>
+                <h3 className="text-lg font-bold text-neutral-200">Chợ Giao Thương Tân Dậu</h3>
+                <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Niêm yết hồ sơ và gian hàng mini lên hệ thống của cộng đồng. Ưu tiên sử dụng sản phẩm, dịch vụ của đồng niên để cùng nhau thịnh vượng.</p>
               </div>
-              <h3 className="text-lg font-bold text-neutral-200">Chợ Giao Thương Tân Dậu</h3>
-              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Niêm yết hồ sơ và gian hàng mini lên hệ thống của cộng đồng. Ưu tiên sử dụng sản phẩm, dịch vụ của đồng niên để cùng nhau thịnh vượng.</p>
             </div>
 
             {/* Feature 2: AI Semantic Search (Bản mới) - col-span-2 (Rộng, nổi bật) */}
-            <div className="md:col-span-2 h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left flex flex-col justify-between gap-4">
+            <div className="md:col-span-2 flex flex-col justify-between h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left gap-4">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
                   🧠
@@ -197,16 +199,18 @@ export default async function HomePage() {
             </div>
 
             {/* Feature 4: Bảo Mật Thông Tin (Bản mới) - col-span-1 */}
-            <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
-                🔒
+            <div className="flex flex-col justify-between h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left gap-4">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
+                  🔒
+                </div>
+                <h3 className="text-lg font-bold text-neutral-200">Bảo Mật Che Số Điện Thoại</h3>
+                <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Hồ sơ công khai trên web sẽ tự động che 3 số cuối SĐT và ẩn các liên kết cá nhân trước các robot cào quét tin nhắn rác. Chỉ những đồng đội Tân Dậu đã được phê duyệt mới có thể xem.</p>
               </div>
-              <h3 className="text-lg font-bold text-neutral-200">Bảo Mật Che Số Điện Thoại</h3>
-              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Hồ sơ công khai trên web sẽ tự động che 3 số cuối SĐT và ẩn các liên kết cá nhân trước các robot cào quét tin nhắn rác. Chỉ những đồng đội Tân Dậu đã được phê duyệt mới có thể xem.</p>
             </div>
 
             {/* Feature 5: Linktree Shop Mini (Bản mới) - col-span-2 (Rộng, nổi bật) */}
-            <div className="md:col-span-2 h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left flex flex-col justify-between gap-4">
+            <div className="md:col-span-2 flex flex-col justify-between h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left gap-4">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
                   🛍️
@@ -219,16 +223,18 @@ export default async function HomePage() {
             </div>
 
             {/* Feature 3: Xác Thực Đồng Niên (Bản cũ) - col-span-1 */}
-            <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
-                🛡️
+            <div className="flex flex-col justify-between h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left gap-4">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
+                  🛡️
+                </div>
+                <h3 className="text-lg font-bold text-neutral-200">Xác Thực Đồng Niên 100%</h3>
+                <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Mỗi thành viên tham gia đều được Ban quản trị xác minh năm sinh 1981 và thông tin kinh doanh. Đảm bảo môi trường sạch, tin cậy.</p>
               </div>
-              <h3 className="text-lg font-bold text-neutral-200">Xác Thực Đồng Niên 100%</h3>
-              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Mỗi thành viên tham gia đều được Ban quản trị xác minh năm sinh 1981 và thông tin kinh doanh. Đảm bảo môi trường sạch, tin cậy.</p>
             </div>
 
             {/* Feature 6: Auto-post Facebook & Telegram (Bản mới) - col-span-2 (Rộng, nổi bật) */}
-            <div className="md:col-span-2 h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left flex flex-col justify-between gap-4">
+            <div className="md:col-span-2 flex flex-col justify-between h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left gap-4">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
                   ⚡
@@ -256,8 +262,8 @@ export default async function HomePage() {
           </div>
 
           <div className="relative">
-            {/* Dải line kết nối giữa các bước trên Desktop */}
-            <div className="hidden md:block absolute top-12 left-[16%] w-[68%] h-px bg-neutral-800"></div>
+            {/* Dải line kết nối giữa các bước trên Desktop - Đã sửa top-10 thẳng tâm vòng tròn */}
+            <div className="hidden md:block absolute top-10 left-[16%] w-[68%] h-px bg-neutral-800"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
               {/* Bước 1 */}
@@ -345,8 +351,8 @@ export default async function HomePage() {
               </div>
             </div>
             
-            {/* Tài khoản ngân quỹ */}
-            <div className="lg:w-96 w-full bg-neutral-950 border border-neutral-850 p-6 rounded-2xl flex flex-col justify-center gap-4 text-center">
+            {/* Tài khoản ngân quỹ - Đã nâng cấp thành Glassmorphism bo tròn cao cấp */}
+            <div className="lg:w-96 w-full bg-neutral-900/60 border border-neutral-850 p-6 rounded-3xl flex flex-col justify-center gap-4 text-center shadow-xl hover:border-amber-500/10 transition-colors">
               <span className="text-3xl">☕</span>
               <div>
                 <p className="text-[10px] text-neutral-450 font-bold uppercase tracking-wider">Tài khoản ngân quỹ máy chủ</p>

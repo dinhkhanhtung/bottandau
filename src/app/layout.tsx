@@ -50,15 +50,20 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 w-full border-b border-neutral-800 bg-neutral-950/70 backdrop-blur-md">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
-              {/* Logo */}
+              {/* Logo với hình ảnh gà vàng tròn cao cấp giống bản cũ */}
               <div className="flex items-center flex-shrink-0">
-                <a href="/" className="flex items-center gap-1.5 group">
-                  <span className="text-xs sm:text-base md:text-xl font-black bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent group-hover:opacity-85 transition-opacity whitespace-nowrap">
-                    KIM KÊ CONNECT
-                  </span>
-                  <span className="hidden sm:inline-flex rounded-full bg-amber-500/10 px-2 py-0.5 text-[10px] font-bold text-amber-400 ring-1 ring-inset ring-amber-500/20 whitespace-nowrap">
-                    AI Network
-                  </span>
+                <a href="/" className="flex items-center gap-2.5 group">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-amber-500 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform flex-shrink-0 bg-neutral-900">
+                    <img src="/images/kimke_ai_hero.png" alt="Kim Kê Logo" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs sm:text-base md:text-lg font-black bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent group-hover:opacity-85 transition-opacity whitespace-nowrap tracking-tight">
+                      KIM KÊ CONNECT
+                    </span>
+                    <span className="hidden sm:inline-block text-[8px] font-extrabold text-amber-400/80 uppercase tracking-widest leading-none mt-0.5">
+                      AI Network
+                    </span>
+                  </div>
                 </a>
               </div>
               
