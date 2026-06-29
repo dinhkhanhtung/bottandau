@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Kim Kê Connect",
     images: [
       {
-        url: "/images/kimke_ai_hero.png",
+        url: "/images/kimke_share_banner.png",
         width: 1200,
         height: 630,
         alt: "Kim Kê Connect AI Network"

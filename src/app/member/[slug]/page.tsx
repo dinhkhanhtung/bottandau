@@ -43,7 +43,7 @@ export async function generateMetadata({ params, searchParams }: MemberDetailPag
   const biz = (member as any).member_businesses || {};
   let title = `${member.fullname} - Chuyên ${biz.primary_job} tại ${member.province} | Kim Kê Connect`;
   let description = biz.bio || `Kết nối với ${member.fullname} chuyên ${biz.primary_job} tại ${member.province} trên mạng lưới Kim Kê AI Connect.`;
-  let ogImage = member.avatar_url || 'https://kimke-connect.vercel.app/images/kimke_ai_hero.png';
+  let ogImage = member.avatar_url || '/images/kimke_share_banner.png';
 
   // 🛍️ Nếu chia sẻ link sản phẩm cụ thể (?product=id)
   if (productId && typeof productId === 'string') {

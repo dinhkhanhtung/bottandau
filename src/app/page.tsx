@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import PhoneMockup from '@/components/PhoneMockup';
 
 export const revalidate = 3600; // Cache trang chủ tĩnh trong 1 giờ
 
@@ -10,23 +10,29 @@ export default async function HomePage() {
         <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-amber-500 to-yellow-600 opacity-15 sm:left-[calc(50%-30rem)] sm:w-[72rem]" />
       </div>
 
-      {/* Hero Section (Tối ưu Responsive, Mobile First) */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-16 sm:pt-16 sm:pb-28">
+      {/* ========================================================
+          1. HERO SECTION (Tối ưu Responsive, Mobile First)
+         ======================================================== */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-16 sm:pt-16 sm:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Cột trái: Nội dung thuyết phục */}
+          
+          {/* Cột trái: Tiêu đề & Nội dung thuyết phục (Đồng bộ bản cũ) */}
           <div className="lg:col-span-7 text-left space-y-4 sm:space-y-6">
             <div className="inline-flex rounded-full bg-amber-500/10 px-4 py-2 text-xs font-extrabold text-amber-400 ring-1 ring-inset ring-amber-500/20 uppercase tracking-widest">
               🐓 Tân Dậu Việt - Chắp Cánh Tình Đồng niên
             </div>
+            
             <h1 className="text-4xl font-black tracking-tight text-neutral-50 sm:text-6xl leading-none">
               Cùng Nhau Kết Nối<br />
               <span className="bg-gradient-to-r from-amber-400 via-yellow-250 to-amber-500 bg-clip-text text-transparent">
                 Cùng Nhau Thịnh Vượng
               </span>
             </h1>
+            
             <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-350 font-medium">
               Nền tảng độc quyền giúp các bạn Tân Dậu 1981 hỗ trợ chéo sản phẩm dịch vụ, xây dựng mạng lưới kinh doanh bền vững dựa trên sự tin cậy, đồng điệu và trợ lực từ Trí Tuệ Nhân Tạo (AI).
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a
                 href="/dang-ky"
@@ -45,187 +51,192 @@ export default async function HomePage() {
             </div>
           </div>
 
-          {/* Cột phải: Hình ảnh thương hiệu 3D sang trọng */}
+          {/* Cột phải: Điện thoại PhoneMockup Chat động trực quan */}
           <div className="lg:col-span-5 flex justify-center mt-6 lg:mt-0 relative">
             {/* Badge trái */}
-            <div className="absolute -top-4 -left-4 z-10 bg-neutral-900/95 border border-neutral-800 backdrop-blur-md p-3 rounded-2xl shadow-xl flex items-center gap-2 max-w-[160px]">
-              <span className="text-xl">👥</span>
+            <div className="absolute top-10 -left-6 z-10 bg-neutral-900/90 border border-neutral-800/80 backdrop-blur-md p-3 rounded-2xl shadow-xl flex items-center gap-2 max-w-[150px] animate-bounce" style={{ animationDuration: '4s' }}>
+              <span className="text-lg">👥</span>
               <div>
-                <p className="text-[8px] text-neutral-500 font-extrabold uppercase tracking-wider">Mạng Lưới</p>
-                <p className="text-[10px] font-black text-neutral-200 leading-tight">Kết Nối Đồng Niên</p>
+                <p className="text-[7px] text-neutral-500 font-extrabold uppercase tracking-wider">Mạng Lưới</p>
+                <p className="text-[9px] font-black text-neutral-200 leading-tight">Kết Nối Đồng Niên</p>
               </div>
             </div>
 
             {/* Badge phải */}
-            <div className="absolute -bottom-4 -right-4 z-10 bg-neutral-900/95 border border-neutral-800 backdrop-blur-md p-3 rounded-2xl shadow-xl flex items-center gap-2 max-w-[160px]">
-              <span className="text-xl">🛍️</span>
+            <div className="absolute bottom-16 -right-6 z-10 bg-neutral-900/90 border border-neutral-800/80 backdrop-blur-md p-3 rounded-2xl shadow-xl flex items-center gap-2 max-w-[150px] animate-bounce" style={{ animationDuration: '4.5s', animationDelay: '1s' }}>
+              <span className="text-lg">🛍️</span>
               <div>
-                <p className="text-[8px] text-neutral-500 font-extrabold uppercase tracking-wider">Sản Phẩm</p>
-                <p className="text-[10px] font-black text-neutral-200 leading-tight">Ưu Tiên Tân Dậu</p>
+                <p className="text-[7px] text-neutral-500 font-extrabold uppercase tracking-wider">Sản Phẩm</p>
+                <p className="text-[9px] font-black text-neutral-200 leading-tight">Ưu Tiên Tân Dậu</p>
               </div>
             </div>
 
-            <div className="relative rounded-3xl border border-neutral-800 bg-neutral-900/25 p-3 sm:p-4 shadow-2xl backdrop-blur-md overflow-hidden hover:border-amber-500/30 transition-colors duration-500">
-              <img
-                src="/images/kimke_ai_hero.png"
-                alt="Kim Kê AI Connection Logo"
-                className="rounded-2xl max-w-full h-auto object-cover max-h-[300px] sm:max-h-[380px] hover:scale-102 transition-transform duration-500"
-              />
-            </div>
+            {/* Render component PhoneMockup giả lập chat */}
+            <PhoneMockup />
           </div>
+          
         </div>
       </section>
 
-      {/* Stats Section (Số liệu) */}
+      {/* ========================================================
+          2. STATS SECTION (Số liệu thống kê)
+         ======================================================== */}
       <section className="border-y border-neutral-900 bg-neutral-950/40 py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
             <div>
               <span className="block text-2xl sm:text-4xl font-extrabold text-amber-400">1.000+</span>
-              <span className="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mt-1 block">Thành viên Tân Dậu</span>
+              <span className="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mt-1 block font-bold">Thành viên Tân Dậu</span>
             </div>
             <div>
               <span className="block text-2xl sm:text-4xl font-extrabold text-amber-400">500+</span>
-              <span className="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mt-1 block">Ngành nghề dịch vụ</span>
+              <span className="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mt-1 block font-bold">Ngành nghề giao thương</span>
             </div>
             <div>
               <span className="block text-2xl sm:text-4xl font-extrabold text-amber-400">0 VNĐ</span>
-              <span className="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mt-1 block">Chi phí kết nối</span>
+              <span className="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mt-1 block font-bold">Chi phí kết nối</span>
             </div>
             <div>
               <span className="block text-2xl sm:text-4xl font-extrabold text-amber-400">100%</span>
-              <span className="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mt-1 block">Bảo mật nội bộ</span>
+              <span className="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mt-1 block font-bold">Bảo mật thông tin</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 📌 SECTION MỚI: Tại sao lại là tuổi gà 1981? (Sự đồng cảm & Gắn kết) */}
+      {/* ========================================================
+          3. BENTO GRID FEATURES: TÍNH NĂNG ƯU VIỆT (Học tập bản cũ)
+         ======================================================== */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-100">
-              Sức mạnh của sự tin cậy từ những người bạn cùng tuổi 1981
-            </h2>
-            <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
-              Tân Dậu 1981 bước vào tuổi trung niên, đã trải qua nhiều thăng trầm trong sự nghiệp và cuộc sống. Chúng ta thấu hiểu, có chung góc nhìn và dễ dàng tin cậy nhau hơn bất kỳ ai khác.
-            </p>
-            <ul className="space-y-3 text-sm text-neutral-300">
-              <li className="flex items-center gap-2">
-                <span className="text-amber-400">✔</span> Ưu tiên sử dụng sản phẩm và dịch vụ của đồng đội.
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-amber-400">✔</span> Không lo lắng vấn đề lừa đảo nhờ cơ chế xác minh của Ban quản trị.
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-amber-400">✔</span> Hợp tác kinh doanh bền vững dựa trên sự thấu hiểu tử vi, vận mệnh chung.
-              </li>
-            </ul>
-          </div>
-          <div className="bg-neutral-900/20 border border-neutral-800 p-8 rounded-3xl backdrop-blur-sm space-y-4">
-            <span className="text-3xl">🛡️</span>
-            <h3 className="text-lg font-bold text-neutral-100">Cam kết bảo mật dữ liệu tuyệt đối</h3>
-            <p className="text-sm text-neutral-400 leading-relaxed">
-              Chúng tôi hiểu rằng thông tin cá nhân rất nhạy cảm. Vì thế, Kim Kê Connect thiết kế **cơ chế bảo mật 2 lớp**:
-            </p>
-            <p className="text-xs text-neutral-500 leading-relaxed">
-              Thông tin liên hệ của bạn (SĐT, Facebook) sẽ được che bớt trên trang web để tránh các cuộc gọi rác và các công cụ tự động cào quét dữ liệu. Chỉ có thành viên thật sự kết nối thông qua Messenger Chatbot mới lấy được thông tin của bạn.
-            </p>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <h2 className="text-xs font-extrabold tracking-widest text-amber-400 uppercase">Hệ thống công nghệ tối tân</h2>
+          <p className="text-3xl font-black text-neutral-100 sm:text-4xl">Những Đặc Quyền Vượt Trội Của Thành Viên</p>
+          <p className="text-sm text-neutral-450 leading-relaxed">Được xây dựng trên triết lý chắt lọc tinh hoa từ phiên bản cũ, Kim Kê Connect mang lại giải pháp giao thương thực chất, bảo mật và thông minh hơn bao giờ hết.</p>
         </div>
-      </section>
 
-      {/* Funnel Steps Section (Quy trình) */}
-      <section className="bg-neutral-950/50 border-y border-neutral-900 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
-            <h2 className="text-base font-semibold leading-7 text-amber-400">Phễu hoạt động</h2>
-            <p className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-neutral-100">
-              Cách thức kết nối trong 3 bước
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Box 1: AI Semantic Search */}
+          <div className="md:col-span-2 rounded-3xl border border-neutral-850 bg-neutral-900/20 p-6 sm:p-8 flex flex-col justify-between hover:border-amber-500/10 transition-colors">
+            <span className="text-3xl">🧠</span>
+            <div className="mt-6">
+              <h3 className="text-lg font-bold text-neutral-100">Tra cứu thông minh bằng AI (Semantic Search)</h3>
+              <p className="text-xs sm:text-sm text-neutral-450 mt-2 leading-relaxed">
+                Không cần tra bảng biểu hay ghi nhớ tên. Thành viên chỉ cần gõ nhu cầu bằng giọng nói hoặc câu hỏi tự nhiên trên khung chat Messenger: *"Tìm người làm cơ điện ở Thái Nguyên"*, trợ lý AI sẽ tự phân tích và đề xuất đúng người phù hợp nhất.
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            <div className="bg-neutral-900/30 border border-neutral-800 p-6 sm:p-8 rounded-3xl relative overflow-hidden backdrop-blur-sm">
-              <div className="text-3xl mb-4">1️⃣</div>
-              <h3 className="text-base sm:text-lg font-bold text-neutral-100 mb-2">Đăng ký Hồ sơ</h3>
-              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
-                Bạn điền form giới thiệu dịch vụ cung cấp và nhu cầu cần mua/tìm đối tác. Quá trình chỉ mất 1 phút và không cần mật khẩu.
+          {/* Box 2: Phễu bảo mật */}
+          <div className="rounded-3xl border border-neutral-850 bg-neutral-900/20 p-6 sm:p-8 flex flex-col justify-between hover:border-amber-500/10 transition-colors">
+            <span className="text-3xl">🔒</span>
+            <div className="mt-6">
+              <h3 className="text-lg font-bold text-neutral-100">Bảo mật thông tin & Chống spam</h3>
+              <p className="text-xs sm:text-sm text-neutral-450 mt-2 leading-relaxed">
+                Thông tin nhạy cảm (SĐT, liên kết cá nhân) trên web sẽ bị che và ẩn hoàn toàn trước các công cụ cào quét rác. Chỉ những đồng đội Tân Dậu đã được phê duyệt và kích hoạt tài khoản mới có thể mở khóa để xem đầy đủ.
               </p>
             </div>
-            <div className="bg-neutral-900/30 border border-neutral-800 p-6 sm:p-8 rounded-3xl relative overflow-hidden backdrop-blur-sm">
-              <div className="text-3xl mb-4">2️⃣</div>
-              <h3 className="text-base sm:text-lg font-bold text-neutral-100 mb-2">Ban quản trị duyệt</h3>
-              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
-                Hồ sơ được xác thực đúng tuổi Tân Dậu 1981. AI tự động tối ưu hóa, gắn tag và sinh mã vector để nạp vào hệ thống tìm kiếm thông minh.
+          </div>
+
+          {/* Box 3: Đặc quyền Linktree */}
+          <div className="rounded-3xl border border-neutral-850 bg-neutral-900/20 p-6 sm:p-8 flex flex-col justify-between hover:border-amber-500/10 transition-colors">
+            <span className="text-3xl">🛍️</span>
+            <div className="mt-6">
+              <h3 className="text-lg font-bold text-neutral-100">Mini Shop cá nhân phong cách Linktree</h3>
+              <p className="text-xs sm:text-sm text-neutral-450 mt-2 leading-relaxed">
+                Tặng riêng một trang Linktree bán hàng cá nhân bóng bẩy, tích hợp nút đặt mua hàng gom tin nhắn Zalo 1-Click. Khách hàng chỉ việc chọn sản phẩm, nhấn nút và dán tin nhắn chat trực tiếp với bạn.
               </p>
             </div>
-            <div className="bg-neutral-900/30 border border-neutral-800 p-6 sm:p-8 rounded-3xl relative overflow-hidden backdrop-blur-sm">
-              <div className="text-3xl mb-4">3️⃣</div>
-              <h3 className="text-base sm:text-lg font-bold text-neutral-100 mb-2">Kết nối trên Messenger</h3>
-              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
-                Vào Messenger của Page gõ từ khóa tự nhiên để tìm kiếm đồng đội. AI sẽ tự động ghép nối (Matching) cơ hội hợp tác cho bạn hằng ngày.
+          </div>
+
+          {/* Box 4: Telegram & Facebook automation */}
+          <div className="md:col-span-2 rounded-3xl border border-neutral-850 bg-neutral-900/20 p-6 sm:p-8 flex flex-col justify-between hover:border-amber-500/10 transition-colors">
+            <span className="text-3xl">⚡</span>
+            <div className="mt-6">
+              <h3 className="text-lg font-bold text-neutral-100">Duyệt tự động Telegram & Quảng bá Facebook</h3>
+              <p className="text-xs sm:text-sm text-neutral-450 mt-2 leading-relaxed">
+                Hồ sơ đăng ký được gửi thẳng về Telegram cho Ban quản trị duyệt tức thời bằng nút bấm. Ngay khi được duyệt, hệ thống tự động soạn bài giới thiệu và đăng bài chào mừng, quảng bá thương hiệu của bạn lên Fanpage cộng đồng Kim Kê Connect.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 📌 SECTION MỚI: FAQ (Câu hỏi thường gặp) */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
-          <h2 className="text-base font-semibold leading-7 text-amber-400">Giải đáp thắc mắc</h2>
-          <p className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-neutral-100">
-            Câu hỏi thường gặp
-          </p>
+      {/* ========================================================
+          4. DONATE MISSION: SỨ MỆNH ĐỒNG HÀNH & DUY TRÌ (Học tập bản cũ)
+         ======================================================== */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-neutral-900">
+        <div className="relative rounded-3xl border border-neutral-850 bg-gradient-to-b from-neutral-900/40 to-neutral-950/60 p-8 sm:p-12 overflow-hidden shadow-2xl">
+          <div className="absolute top-0 left-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+          
+          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+            <div className="flex-1 text-left space-y-4">
+              <span className="inline-block bg-amber-500/10 text-amber-400 text-xs font-extrabold px-3.5 py-1.5 rounded-full border border-amber-500/20 uppercase tracking-wider">
+                Mô hình phi lợi nhuận
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-neutral-100 tracking-tight">
+                Hỗ Trợ Chéo Vì Một Cộng Đồng Vững Mạnh
+              </h2>
+              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                Kim Kê Connect hoạt động hoàn toàn miễn phí và không thu bất kỳ khoản phí đăng ký hay phí thành viên nào. Chúng tôi duy trì máy chủ, chi phí vận hành API Gemini AI và nâng cấp hệ thống dựa trên sự đóng góp tự nguyện (Donate) tùy tâm của các thành viên.
+              </p>
+              <p className="text-xs sm:text-sm text-neutral-450">
+                Mọi sự đóng góp của đồng đội đều được ghi nhận trang trọng trên trang hồ sơ cá nhân và được tặng đặc quyền nâng cấp trang bán hàng Linktree mạ vàng cao cấp.
+              </p>
+            </div>
+            
+            <div className="lg:w-1/3 w-full bg-neutral-950 border border-neutral-850 p-6 rounded-2xl flex flex-col justify-center gap-4 text-center">
+              <span className="text-4xl">☕</span>
+              <div>
+                <p className="text-xs text-neutral-400 font-medium">Tài khoản ngân quỹ máy chủ</p>
+                <p className="text-sm font-black text-amber-400 mt-1">Techcombank: 1903456789999</p>
+                <p className="text-[10px] text-neutral-500 mt-1">Nội dung: [Họ Tên] - Ung ho Kim Ke</p>
+              </div>
+              <p className="text-[10px] text-neutral-500 italic">
+                * Mọi khoản đóng góp đều được chuyển 100% vào chi phí duy trì máy chủ và phát triển tính năng mới.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================
+          5. FAQ SECTION: CÂU HỎI THƯỜNG GẶP
+         ======================================================== */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-neutral-900">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-xs font-extrabold tracking-widest text-amber-400 uppercase">Hỏi đáp nhanh</h2>
+          <p className="text-3xl font-black text-neutral-100 sm:text-4xl">Giải đáp thắc mắc</p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-6">
-          <div className="bg-neutral-900/30 border border-neutral-800 p-6 rounded-2xl">
-            <h3 className="text-sm sm:text-base font-bold text-neutral-200">Q: Làm sao để được gắn nhãn "Đã xác minh" (Verified)?</h3>
-            <p className="text-xs sm:text-sm text-neutral-400 mt-2 leading-relaxed">
-              A: Sau khi đăng ký và được duyệt hồ sơ cơ bản, bạn có thể thực hiện gia hạn hoặc nâng cấp trạng thái qua Telegram Bot của Ban quản trị. Nhãn Verified giúp hiển thị đầy đủ thông tin liên hệ và hình ảnh sản phẩm của bạn.
+        <div className="mx-auto max-w-3xl space-y-6">
+          <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
+            <h3 className="text-sm sm:text-base font-bold text-neutral-100">1. Làm thế nào để mở khóa xem số điện thoại đầy đủ?</h3>
+            <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
+              Bạn chỉ cần điền đơn đăng ký thành viên trên trang web này. Sau khi Ban quản trị duyệt hồ sơ thành công, trên trang web sẽ có nút bấm để bạn liên kết tài khoản Messenger trong 1 giây. Từ đó về sau, bạn sẽ xem được đầy đủ số điện thoại của tất cả các đồng đội khác khi tra cứu trên Bot.
             </p>
           </div>
-          <div className="bg-neutral-900/30 border border-neutral-800 p-6 rounded-2xl">
-            <h3 className="text-sm sm:text-base font-bold text-neutral-200">Q: Mạng lưới này có thu phí hoa hồng giao dịch không?</h3>
-            <p className="text-xs sm:text-sm text-neutral-400 mt-2 leading-relaxed">
-              A: Hoàn toàn không. Kim Kê Connect hoạt động với sứ mệnh phi lợi nhuận để hỗ trợ cộng đồng Tân Dậu 1981. Hai thành viên tự liên hệ trực tiếp ngoài bot và tự chịu trách nhiệm về giao dịch của mình.
+
+          <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
+            <h3 className="text-sm sm:text-base font-bold text-neutral-100">2. Tôi có thể đăng ký nhiều ngành nghề kinh doanh được không?</h3>
+            <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
+              Hoàn toàn được. Trong form đăng ký, ngoài ngành nghề chính, bạn có thể điền thêm các ngành nghề phụ và các sản phẩm/dịch vụ chi tiết khác để trợ lý AI ghi nhận và ưu tiên giới thiệu bạn cho các nhu cầu phù hợp.
             </p>
           </div>
-          <div className="bg-neutral-900/30 border border-neutral-800 p-6 rounded-2xl">
-            <h3 className="text-sm sm:text-base font-bold text-neutral-200">Q: Tôi có thể chỉnh sửa thông tin hồ sơ của mình sau khi gửi không?</h3>
-            <p className="text-xs sm:text-sm text-neutral-400 mt-2 leading-relaxed">
-              A: Có. Bạn có thể gửi lại đăng ký mới với số điện thoại cũ, hệ thống sẽ tự động cập nhật đè thông tin mới và gửi yêu cầu phê duyệt cập nhật đến Ban quản trị.
+
+          <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
+            <h3 className="text-sm sm:text-base font-bold text-neutral-100">3. Thông tin cá nhân của tôi được bảo vệ như thế nào?</h3>
+            <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
+              Website của chúng tôi được thiết kế với cơ chế bảo mật phân quyền cấp cột cao cấp. Hacker hay các robot cào quét số điện thoại công khai trên mạng sẽ bị chặn hoàn toàn. Số điện thoại của bạn chỉ được mã hóa và hiển thị đối với những đồng đội Tân Dậu 1981 thực thụ đã được xác minh danh tính.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Call to action bottom */}
-      <section className="mx-auto max-w-4xl px-4 sm:px-6 pb-24 text-center">
-        <div className="rounded-3xl border border-neutral-850 bg-gradient-to-b from-neutral-900 to-neutral-950 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-100">
-            Sẵn sàng kết nối cùng đồng đội 1981?
-          </h2>
-          <p className="mt-4 text-xs sm:text-sm text-neutral-400 max-w-md mx-auto leading-relaxed">
-            Hơn 1,000 thành viên Tân Dậu đã đăng ký dịch vụ của họ. Hãy đưa dịch vụ của bạn lên để đồng đội ưu tiên sử dụng.
-          </p>
-          <div className="mt-8 flex justify-center">
-            <a
-              href="/dang-ky"
-              className="rounded-full bg-amber-500 px-8 py-3.5 text-sm font-semibold text-neutral-950 shadow-md hover:bg-amber-400 transition-all hover:scale-105"
-            >
-              Đăng ký thành viên ngay
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Decorative Blur Bottom */}
-      <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-        <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 bg-gradient-to-tr from-amber-500 to-yellow-600 opacity-10 sm:left-[calc(50%+36rem)] sm:w-[72rem]" />
-      </div>
+      {/* Footer */}
+      <footer className="border-t border-neutral-900 py-8 text-center text-xs text-neutral-600">
+        <p className="font-medium">🐓 Kim Kê AI Network - Mạng lưới giao thương nội bộ Tân Dậu 1981</p>
+        <p className="mt-1">Thiết kế bởi các đồng đội Tân Dậu vì sự thịnh vượng của tập thể.</p>
+      </footer>
     </div>
   );
 }
