@@ -313,8 +313,8 @@ export async function POST(request: Request) {
                 responseText += `\n\n🔒 Bạn chưa đăng ký thành viên hoặc chưa liên kết tài khoản nên thông tin liên hệ bị ẩn bớt. Đăng ký gia nhập miễn phí tại: ${appUrl}/dang-ky để mở khóa xem thông tin đầy đủ.`;
               }
 
-              // Lời kêu gọi Donate tinh tế
-              responseText += `\n\n---\n🐓 Kim Kê Connect hoạt động phi lợi nhuận và miễn phí. Nếu kết nối này hữu ích, hãy cân nhắc ủng hộ (donate) một chút "trà nước" để cùng Ban quản trị duy trì máy chủ nhé!\n👉 TK Quỹ: 1903456789999 - Techcombank (Nội dung: [Họ Tên] - Ung ho Kim Ke)`;
+              // 🌟 Bổ sung lời kêu gọi Donate tinh tế (Đúng thời điểm)
+              responseText += `\n\n---\n🐓 Kim Kê Connect hoạt động phi lợi nhuận và miễn phí. Nếu kết nối này hữu ích, hãy cân nhắc ủng hộ (donate) một chút "trà nước" để cùng Ban quản trị duy trì máy chủ nhé!\n👉 TK Quỹ: 0982581222 - VietinBank (Chủ TK: Đinh Khánh Tùng - Nội dung: [Họ Tên] - Ung ho Kim Ke)`;
               
               await sendTextMessage(senderId, responseText);
             }

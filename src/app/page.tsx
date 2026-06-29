@@ -1,4 +1,5 @@
 import PhoneMockup from '@/components/PhoneMockup';
+import FaqSection from '@/components/FaqSection';
 
 export const revalidate = 3600; // Cache trang chủ tĩnh trong 1 giờ
 
@@ -16,7 +17,7 @@ export default async function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-16 sm:pt-16 sm:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Cột trái: Tiêu đề & Nội dung thuyết phục (Đồng bộ bản cũ) */}
+          {/* Cột trái: Tiêu đề & Nội dung thuyết phục */}
           <div className="lg:col-span-7 text-left space-y-4 sm:space-y-6">
             <div className="inline-flex rounded-full bg-amber-500/10 px-4 py-2 text-xs font-extrabold text-amber-400 ring-1 ring-inset ring-amber-500/20 uppercase tracking-widest">
               🐓 Tân Dậu Việt - Chắp Cánh Tình Đồng niên
@@ -71,7 +72,7 @@ export default async function HomePage() {
               </div>
             </div>
 
-            {/* Render component PhoneMockup giả lập chat */}
+            {/* PhoneMockup */}
             <PhoneMockup />
           </div>
           
@@ -105,7 +106,7 @@ export default async function HomePage() {
       </section>
 
       {/* ========================================================
-          3. BENTO GRID FEATURES: TÍNH NĂNG ƯU VIỆT (Học tập bản cũ)
+          3. BENTO GRID FEATURES: TÍNH NĂNG ƯU VIỆT
          ======================================================== */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -162,7 +163,7 @@ export default async function HomePage() {
       </section>
 
       {/* ========================================================
-          4. DONATE MISSION: SỨ MỆNH ĐỒNG HÀNH & DUY TRÌ (Học tập bản cũ)
+          4. DONATE MISSION: SỨ MỆNH ĐỒNG HÀNH & DUY TRÌ
          ======================================================== */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-neutral-900">
         <div className="relative rounded-3xl border border-neutral-850 bg-gradient-to-b from-neutral-900/40 to-neutral-950/60 p-8 sm:p-12 overflow-hidden shadow-2xl">
@@ -176,20 +177,22 @@ export default async function HomePage() {
               <h2 className="text-2xl sm:text-3xl font-black text-neutral-100 tracking-tight">
                 Hỗ Trợ Chéo Vì Một Cộng Đồng Vững Mạnh
               </h2>
-              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
                 Kim Kê Connect hoạt động hoàn toàn miễn phí và không thu bất kỳ khoản phí đăng ký hay phí thành viên nào. Chúng tôi duy trì máy chủ, chi phí vận hành API Gemini AI và nâng cấp hệ thống dựa trên sự đóng góp tự nguyện (Donate) tùy tâm của các thành viên.
               </p>
-              <p className="text-xs sm:text-sm text-neutral-450">
+              <p className="text-xs sm:text-sm text-neutral-500">
                 Mọi sự đóng góp của đồng đội đều được ghi nhận trang trọng trên trang hồ sơ cá nhân và được tặng đặc quyền nâng cấp trang bán hàng Linktree mạ vàng cao cấp.
               </p>
             </div>
             
+            {/* STK được sửa thành STK VietinBank thật của anh Đinh Khánh Tùng */}
             <div className="lg:w-1/3 w-full bg-neutral-950 border border-neutral-850 p-6 rounded-2xl flex flex-col justify-center gap-4 text-center">
               <span className="text-4xl">☕</span>
               <div>
-                <p className="text-xs text-neutral-400 font-medium">Tài khoản ngân quỹ máy chủ</p>
-                <p className="text-sm font-black text-amber-400 mt-1">Techcombank: 1903456789999</p>
-                <p className="text-[10px] text-neutral-500 mt-1">Nội dung: [Họ Tên] - Ung ho Kim Ke</p>
+                <p className="text-[10px] text-neutral-450 font-bold uppercase tracking-wider">Tài khoản ngân quỹ máy chủ</p>
+                <p className="text-sm font-black text-amber-400 mt-1.5">VietinBank: 0982581222</p>
+                <p className="text-[9px] text-neutral-400 font-extrabold mt-0.5">Chủ TK: ĐINH KHÁNH TÙNG</p>
+                <p className="text-[9px] text-neutral-500 mt-1.5">Nội dung: [Họ Tên] - Ung ho Kim Ke</p>
               </div>
               <p className="text-[10px] text-neutral-500 italic">
                 * Mọi khoản đóng góp đều được chuyển 100% vào chi phí duy trì máy chủ và phát triển tính năng mới.
@@ -200,7 +203,7 @@ export default async function HomePage() {
       </section>
 
       {/* ========================================================
-          5. FAQ SECTION: CÂU HỎI THƯỜNG GẶP (Học tập bản cũ)
+          5. FAQ SECTION: CÂU HỎI THƯỜNG GẶP (Học tập bản cũ - FaqSection Accordion)
          ======================================================== */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-neutral-900">
         <div className="text-center mb-16 space-y-4">
@@ -208,46 +211,12 @@ export default async function HomePage() {
           <p className="text-3xl font-black text-neutral-100 sm:text-4xl">Giải đáp thắc mắc</p>
         </div>
 
-        <div className="mx-auto max-w-3xl space-y-6">
-          <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
-            <h3 className="text-sm sm:text-base font-bold text-neutral-100">1. Tôi sinh năm khác 1981 có tham gia được không?</h3>
-            <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
-              Rất tiếc, hiện tại cộng đồng này **chỉ dành riêng cho tuổi Tân Dậu 1981** nhằm đảm bảo sự đồng điệu, uy tín tuyệt đối và chắp cánh tình đồng niên tương trợ lẫn nhau.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
-            <h3 className="text-sm sm:text-base font-bold text-neutral-100">2. Làm thế nào để mở khóa xem số điện thoại đầy đủ?</h3>
-            <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
-              Bạn chỉ cần điền đơn đăng ký thành viên trên trang web này. Sau khi Ban quản trị duyệt hồ sơ thành công, trên trang web sẽ có nút bấm để bạn liên kết tài khoản Messenger trong 1 giây. Từ đó về sau, bạn sẽ xem được đầy đủ số điện thoại của tất cả các đồng đội khác khi tra cứu trên Bot.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
-            <h3 className="text-sm sm:text-base font-bold text-neutral-100">3. Làm thế nào để tôi biết đối tác kinh doanh là uy tín?</h3>
-            <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
-              Chúng tôi có hệ thống đánh giá sao (⭐⭐⭐⭐⭐) dựa trên tích điểm hoạt động thực tế. Dấu tích vàng Verified khẳng định thành viên đã được Ban quản trị xác minh danh tính và đóng góp cho quỹ hoạt động của cộng đồng.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
-            <h3 className="text-sm sm:text-base font-bold text-neutral-100">4. Giao dịch mua bán trên này có an toàn không?</h3>
-            <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
-              Kim Kê Connect đóng vai trò là mạng lưới kết nối giúp đồng đội tìm thấy nhau. Mọi giao dịch, thanh toán sẽ do hai bên tự liên hệ trao đổi trực tiếp qua Zalo/Messenger cá nhân. Hãy ưu tiên giao dịch với các thành viên có nhãn Verified và điểm uy tín cao.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-neutral-850 bg-neutral-900/10 p-5 sm:p-6 space-y-2">
-            <h3 className="text-sm sm:text-base font-bold text-neutral-100">5. Thông tin cá nhân của tôi được bảo vệ như thế nào?</h3>
-            <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
-              Website của chúng tôi được thiết kế với cơ chế bảo mật phân quyền cấp cột cao cấp. Hacker hay các robot cào quét số điện thoại công khai trên mạng sẽ bị chặn hoàn toàn. Số điện thoại của bạn chỉ được mã hóa và hiển thị đối với những đồng đội Tân Dậu 1981 thực thụ đã được xác minh danh tính.
-            </p>
-          </div>
-        </div>
+        {/* FaqSection Client Accordion Component */}
+        <FaqSection />
       </section>
 
       {/* ========================================================
-          📍 SECTION OFFICE: VĂN PHÒNG ĐIỀU HÀNH (Học tập bản cũ)
+          📍 SECTION OFFICE: VĂN PHÒNG ĐIỀU HÀNH
          ======================================================== */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-neutral-900 text-center">
         <div className="max-w-3xl mx-auto space-y-4 mb-12">
@@ -271,7 +240,7 @@ export default async function HomePage() {
       </section>
 
       {/* ========================================================
-          👣 FOOTER CHI TIẾT & UY TÍN (Học tập bản cũ)
+          👣 FOOTER CHI TIẾT & UY TÍN
          ======================================================== */}
       <footer className="border-t border-neutral-900 bg-neutral-950/60 py-16 text-xs text-neutral-400">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
@@ -310,8 +279,9 @@ export default async function HomePage() {
                 </a>
               </li>
               <li>
+                {/* 🌟 Đã sửa thành "Kết Nối Tân Dậu Toàn Cầu" theo đúng yêu cầu */}
                 • <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
-                  Facebook Group Cộng Đồng 1981
+                  Facebook Group Kết Nối Tân Dậu Toàn Cầu
                 </a>
               </li>
               <li>
