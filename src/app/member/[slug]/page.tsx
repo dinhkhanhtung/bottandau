@@ -295,14 +295,15 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
             </div>
 
             {/* ========================================================
-                🛍️ SECTION SHOP MINI: Sản phẩm/Dịch vụ thiết kế dạng Card Grid
+                🛍️ SECTION SHOP MINI: Sản phẩm/Dịch vụ thiết kế dạng Card Grid 2 cột
                ======================================================== */}
             <div className="mt-10 border-t border-neutral-850 pt-8 text-left">
-              <h3 className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-5">
+              <h3 className="text-[10px] font-black text-neutral-500 uppercase tracking-widest mb-5">
                 🛍️ GIAN HÀNG MINI NỔI BẬT
               </h3>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Grid 2 cột song song trên cả di động */}
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
                 {productsList.length > 0 ? (
                   // A. Render sản phẩm từ bảng member_products thực tế
                   productsList.map((product) => {
@@ -312,27 +313,27 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
                     return (
                       <div key={product.id} className="bg-neutral-950/60 border border-neutral-850/80 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/20 transition-colors">
                         {product.image_url ? (
-                          <img src={product.image_url} alt={product.name} className="h-32 w-full object-cover bg-neutral-900 border-b border-neutral-850" />
+                          <img src={product.image_url} alt={product.name} className="h-28 sm:h-36 w-full object-cover bg-neutral-900 border-b border-neutral-850" />
                         ) : (
-                          <div className="h-32 w-full bg-neutral-900 flex items-center justify-center text-3xl border-b border-neutral-850">📦</div>
+                          <div className="h-28 sm:h-36 w-full bg-neutral-900 flex items-center justify-center text-xl border-b border-neutral-850">📦</div>
                         )}
-                        <div className="p-4 flex-grow flex flex-col justify-between gap-3">
+                        <div className="p-2.5 sm:p-4 flex-grow flex flex-col justify-between gap-2.5">
                           <div>
-                            <h4 className="text-xs sm:text-sm font-bold text-neutral-250 line-clamp-1">{product.name}</h4>
-                            <p className="text-[10px] text-neutral-500 mt-1 line-clamp-2 leading-relaxed">{product.description || 'Sản phẩm/dịch vụ chất lượng cao.'}</p>
+                            <h4 className="text-[11px] sm:text-sm font-extrabold text-neutral-200 line-clamp-1 leading-snug">{product.name}</h4>
+                            <p className="text-[9px] sm:text-xs text-neutral-500 mt-1 line-clamp-2 leading-relaxed">{product.description || 'Sản phẩm/dịch vụ chất lượng cao.'}</p>
                           </div>
                           
                           <div className="flex flex-col gap-2 pt-2 border-t border-neutral-900/60">
-                            <span className="text-xs font-black text-amber-400">
+                            <span className="text-[10px] sm:text-xs font-black text-amber-400">
                               {product.price ? `${Number(product.price).toLocaleString('vi-VN')} đ` : 'Giá: Liên hệ'}
                             </span>
                             <a 
                               href={orderZaloUrl}
                               target="_blank" 
                               rel="noopener noreferrer" 
-                              className="w-full text-center rounded-lg bg-amber-500/10 border border-amber-500/25 py-2 text-[10px] font-bold text-amber-400 hover:bg-amber-500 hover:text-neutral-950 transition-all block"
+                              className="w-full text-center rounded-lg bg-amber-500/10 border border-amber-500/25 py-2 text-[9px] sm:text-[10px] font-extrabold text-amber-400 hover:bg-amber-500 hover:text-neutral-950 transition-all block"
                             >
-                              Đặt mua qua Zalo 📲
+                              Đặt mua Zalo 📲
                             </a>
                           </div>
                         </div>
@@ -346,19 +347,19 @@ export default async function MemberDetailPage({ params }: MemberDetailPageProps
                       `Chào đồng đội, tôi muốn đặt mua dịch vụ/sản phẩm "${item}" đăng trên Kim Kê Connect. Bạn tư vấn cho tôi nhé!`
                     )}`;
                     return (
-                      <div key={index} className="bg-neutral-950/60 border border-neutral-850/80 rounded-2xl p-4 flex flex-col justify-between gap-4 hover:border-amber-500/20 transition-colors">
+                      <div key={index} className="bg-neutral-950/60 border border-neutral-850/80 rounded-2xl p-2.5 sm:p-4 flex flex-col justify-between gap-3.5 hover:border-amber-500/20 transition-colors">
                         <div>
-                          <div className="h-10 w-10 rounded-full bg-amber-500/5 border border-amber-500/10 flex items-center justify-center text-lg mb-2">🎁</div>
-                          <h4 className="text-xs font-bold text-neutral-200 line-clamp-2 leading-snug">{item}</h4>
+                          <div className="h-8 w-8 rounded-full bg-amber-500/5 border border-amber-500/10 flex items-center justify-center text-base mb-2">🎁</div>
+                          <h4 className="text-[11px] sm:text-sm font-extrabold text-neutral-200 line-clamp-2 leading-snug">{item}</h4>
                           <p className="text-[9px] text-neutral-500 mt-1.5 leading-relaxed">Dịch vụ/Sản phẩm chất lượng cao cung cấp bởi {member.fullname}.</p>
                         </div>
-                        <div className="flex flex-col gap-2 border-t border-neutral-900/60 pt-3">
-                          <span className="text-[10px] font-extrabold text-amber-400">Giá: Liên hệ</span>
+                        <div className="flex flex-col gap-2 border-t border-neutral-900/60 pt-2.5">
+                          <span className="text-[10px] sm:text-xs font-black text-amber-400">Giá: Liên hệ</span>
                           <a 
                             href={orderZaloUrl}
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="w-full text-center rounded-lg bg-amber-500/10 border border-amber-500/25 py-1.5 text-[9px] font-extrabold text-amber-400 hover:bg-amber-500 hover:text-neutral-950 transition-all block"
+                            className="w-full text-center rounded-lg bg-amber-500/10 border border-amber-500/25 py-2 text-[9px] sm:text-[10px] font-extrabold text-amber-400 hover:bg-amber-500 hover:text-neutral-950 transition-all block"
                           >
                             Đặt mua Zalo 📲
                           </a>
