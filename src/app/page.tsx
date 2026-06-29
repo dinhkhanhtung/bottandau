@@ -172,8 +172,9 @@ export default async function HomePage() {
             <p className="text-sm text-neutral-450 max-w-2xl mx-auto">Vì chúng ta cùng tuổi Tân Dậu 1981, cùng chung thế hệ, chung tiếng nói và cực kỳ tin cậy để trợ lực kinh doanh cho nhau.</p>
           </div>
 
+          {/* Layout Bento Grid đan xen thời thượng, gom hiển thị đẹp của web mới */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {/* Feature 1: Chợ Tân Dậu (Bản cũ) */}
+            {/* Feature 1: Chợ Tân Dậu (Bản cũ) - col-span-1 */}
             <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
                 🏪
@@ -182,16 +183,42 @@ export default async function HomePage() {
               <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Niêm yết hồ sơ và gian hàng mini lên hệ thống của cộng đồng. Ưu tiên sử dụng sản phẩm, dịch vụ của đồng niên để cùng nhau thịnh vượng.</p>
             </div>
 
-            {/* Feature 2: AI Semantic Search (Bản mới) */}
-            <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
-                🧠
+            {/* Feature 2: AI Semantic Search (Bản mới) - col-span-2 (Rộng, nổi bật) */}
+            <div className="md:col-span-2 h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left flex flex-col justify-between gap-4">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
+                  🧠
+                </div>
+                <h3 className="text-lg font-bold text-neutral-200">Tra Cứu Thông Minh Bằng Trí Tuệ Nhân Tạo AI</h3>
+                <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
+                  Linh hồn của hệ thống mới. Không cần ghi nhớ cấu trúc lệnh phức tạp, bạn chỉ cần gõ hoặc nói nhu cầu giao thương tự nhiên trên Messenger: *"Tìm người làm cơ điện ở Thái Nguyên"*, trợ lý AI tự động phân tích ngữ nghĩa và đề xuất chính xác đối tác phù hợp nhất.
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-neutral-200">Tra Cứu Thông Minh Bằng AI</h3>
-              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Chỉ cần gõ hoặc nói nhu cầu tự nhiên trên khung chat Messenger: *"Tìm người làm cơ điện ở Thái Nguyên"*, trợ lý AI sẽ tự phân tích và tìm đúng người.</p>
             </div>
 
-            {/* Feature 3: Xác Thực Đồng Niên (Bản cũ) */}
+            {/* Feature 4: Bảo Mật Thông Tin (Bản mới) - col-span-1 */}
+            <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
+                🔒
+              </div>
+              <h3 className="text-lg font-bold text-neutral-200">Bảo Mật Che Số Điện Thoại</h3>
+              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Hồ sơ công khai trên web sẽ tự động che 3 số cuối SĐT và ẩn các liên kết cá nhân trước các robot cào quét tin nhắn rác. Chỉ những đồng đội Tân Dậu đã được phê duyệt mới có thể xem.</p>
+            </div>
+
+            {/* Feature 5: Linktree Shop Mini (Bản mới) - col-span-2 (Rộng, nổi bật) */}
+            <div className="md:col-span-2 h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left flex flex-col justify-between gap-4">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
+                  🛍️
+                </div>
+                <h3 className="text-lg font-bold text-neutral-200">Trang Cá Nhân Linktree & Shop Mini Hoàng Kim</h3>
+                <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
+                  Thiết kế phẳng thời thượng chỉ dành cho thành viên tích cực đóng góp. Trưng bày sản phẩm dạng Grid 2 cột sắc nét, tích hợp nút đặt hàng gom tin nhắn Zalo 1-Click tự động soạn sẵn nội dung mua hàng nhanh chóng.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 3: Xác Thực Đồng Niên (Bản cũ) - col-span-1 */}
             <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
                 🛡️
@@ -200,31 +227,17 @@ export default async function HomePage() {
               <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Mỗi thành viên tham gia đều được Ban quản trị xác minh năm sinh 1981 và thông tin kinh doanh. Đảm bảo môi trường sạch, tin cậy.</p>
             </div>
 
-            {/* Feature 4: Bảo Mật Thông Tin (Bản mới) */}
-            <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
-                🔒
+            {/* Feature 6: Auto-post Facebook & Telegram (Bản mới) - col-span-2 (Rộng, nổi bật) */}
+            <div className="md:col-span-2 h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left flex flex-col justify-between gap-4">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
+                  ⚡
+                </div>
+                <h3 className="text-lg font-bold text-neutral-200">Duyệt Nhanh Telegram & Tự Động Đăng Bài Facebook</h3>
+                <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">
+                  Hồ sơ đăng ký được chuyển tiếp thẳng về nhóm Telegram điều hành của BQT để duyệt tức thì bằng nút bấm. Ngay khi được duyệt, hệ thống AI tự động soạn bài viết PR thương hiệu và đăng bài chào mừng lên Fanpage cộng đồng.
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-neutral-200">Bảo Mật Che Số Điện Thoại</h3>
-              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Hồ sơ công khai trên web sẽ tự động che SĐT và ẩn các liên kết cá nhân trước robot cào quét rác. Chỉ những thành viên Tân Dậu đã đăng ký mới xem được.</p>
-            </div>
-
-            {/* Feature 5: Linktree Shop Mini (Bản mới) */}
-            <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
-                🛍️
-              </div>
-              <h3 className="text-lg font-bold text-neutral-200">Mini Shop Phong Cách Linktree</h3>
-              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Trang cá nhân phẳng mạ vàng, hiển thị Grid 2 cột sản phẩm trực quan, tích hợp nút đặt mua nhanh gom tin nhắn Zalo 1-Click tiện lợi.</p>
-            </div>
-
-            {/* Feature 6: Auto-post Facebook & Telegram (Bản mới) */}
-            <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
-                ⚡
-              </div>
-              <h3 className="text-lg font-bold text-neutral-200">Duyệt Nhanh & Auto-post FB</h3>
-              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Hồ sơ được gửi duyệt thẳng về Telegram admin. Ngay khi duyệt, hệ thống tự động soạn bài giới thiệu và đăng quảng bá lên Fanpage cộng đồng.</p>
             </div>
           </div>
 
