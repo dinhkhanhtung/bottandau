@@ -173,31 +173,58 @@ export default async function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {/* Feature 1 */}
+            {/* Feature 1: Chợ Tân Dậu (Bản cũ) */}
             <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
                 🏪
               </div>
-              <h3 className="text-lg font-bold text-neutral-200">{`Chợ Của Người Tuổi Tân Dậu`}</h3>
+              <h3 className="text-lg font-bold text-neutral-200">Chợ Giao Thương Tân Dậu</h3>
               <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Niêm yết hồ sơ và gian hàng mini lên hệ thống của cộng đồng. Ưu tiên sử dụng sản phẩm, dịch vụ của đồng niên để cùng nhau thịnh vượng.</p>
             </div>
 
-            {/* Feature 2 */}
+            {/* Feature 2: AI Semantic Search (Bản mới) */}
+            <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
+                🧠
+              </div>
+              <h3 className="text-lg font-bold text-neutral-200">Tra Cứu Thông Minh Bằng AI</h3>
+              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Chỉ cần gõ hoặc nói nhu cầu tự nhiên trên khung chat Messenger: *"Tìm người làm cơ điện ở Thái Nguyên"*, trợ lý AI sẽ tự phân tích và tìm đúng người.</p>
+            </div>
+
+            {/* Feature 3: Xác Thực Đồng Niên (Bản cũ) */}
             <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
                 🛡️
               </div>
               <h3 className="text-lg font-bold text-neutral-200">Xác Thực Đồng Niên 100%</h3>
-              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Mỗi thành viên tham gia đều được Ban quản trị xác minh năm sinh 1981 và thông tin kinh doanh. Đảm bảo môi trường sạch, không spam rác.</p>
+              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Mỗi thành viên tham gia đều được Ban quản trị xác minh năm sinh 1981 và thông tin kinh doanh. Đảm bảo môi trường sạch, tin cậy.</p>
             </div>
 
-            {/* Feature 3 */}
+            {/* Feature 4: Bảo Mật Thông Tin (Bản mới) */}
             <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
-                🤝
+                🔒
               </div>
-              <h3 className="text-lg font-bold text-neutral-200">Văn Hóa Ủng Hộ Chéo</h3>
-              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Khi có nhu cầu tìm kiếm, hệ thống AI sẽ tự động phân tích câu hỏi và ưu tiên đề xuất nhà cung cấp dịch vụ là bạn đồng niên ở gần bạn nhất.</p>
+              <h3 className="text-lg font-bold text-neutral-200">Bảo Mật Che Số Điện Thoại</h3>
+              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Hồ sơ công khai trên web sẽ tự động che SĐT và ẩn các liên kết cá nhân trước robot cào quét rác. Chỉ những thành viên Tân Dậu đã đăng ký mới xem được.</p>
+            </div>
+
+            {/* Feature 5: Linktree Shop Mini (Bản mới) */}
+            <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
+                🛍️
+              </div>
+              <h3 className="text-lg font-bold text-neutral-200">Mini Shop Phong Cách Linktree</h3>
+              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Trang cá nhân phẳng mạ vàng, hiển thị Grid 2 cột sản phẩm trực quan, tích hợp nút đặt mua nhanh gom tin nhắn Zalo 1-Click tiện lợi.</p>
+            </div>
+
+            {/* Feature 6: Auto-post Facebook & Telegram (Bản mới) */}
+            <div className="h-full bg-neutral-900/40 p-6 sm:p-8 rounded-3xl border border-neutral-850 shadow-md hover:border-amber-500/10 transition-all duration-300 group hover:-translate-y-1.5 text-center md:text-left space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mx-auto md:mx-0 text-xl font-bold">
+                ⚡
+              </div>
+              <h3 className="text-lg font-bold text-neutral-200">Duyệt Nhanh & Auto-post FB</h3>
+              <p className="text-xs sm:text-sm text-neutral-450 leading-relaxed">Hồ sơ được gửi duyệt thẳng về Telegram admin. Ngay khi duyệt, hệ thống tự động soạn bài giới thiệu và đăng quảng bá lên Fanpage cộng đồng.</p>
             </div>
           </div>
 
