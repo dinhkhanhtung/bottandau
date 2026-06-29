@@ -51,12 +51,12 @@ export default function RootLayout({
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               {/* Logo */}
-              <div className="flex items-center">
-                <a href="/" className="flex items-center gap-2 group">
-                  <span className="text-xl font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent group-hover:opacity-85 transition-opacity">
+              <div className="flex items-center flex-shrink-0">
+                <a href="/" className="flex items-center gap-1.5 group">
+                  <span className="text-xs sm:text-base md:text-xl font-black bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent group-hover:opacity-85 transition-opacity whitespace-nowrap">
                     KIM KÊ CONNECT
                   </span>
-                  <span className="rounded-full bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-400 ring-1 ring-inset ring-amber-500/20">
+                  <span className="hidden sm:inline-flex rounded-full bg-amber-500/10 px-2 py-0.5 text-[10px] font-bold text-amber-400 ring-1 ring-inset ring-amber-500/20 whitespace-nowrap">
                     AI Network
                   </span>
                 </a>
@@ -76,10 +76,10 @@ export default function RootLayout({
               </nav>
 
               {/* CTA Button */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center flex-shrink-0">
                 <a
                   href="/dang-ky"
-                  className="rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-neutral-950 shadow-sm hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500 transition-all hover:scale-105"
+                  className="rounded-full bg-amber-500 px-3 py-1.5 text-[10px] sm:px-4 sm:py-2 sm:text-sm font-extrabold text-neutral-950 shadow-sm hover:bg-amber-400 transition-all hover:scale-105 whitespace-nowrap"
                 >
                   Đăng ký ngay
                 </a>

@@ -23,21 +23,21 @@ export default async function HomePage() {
               🐓 Tân Dậu Việt - Chắp Cánh Tình Đồng niên
             </div>
             
-            <h1 className="text-4xl font-black tracking-tight text-neutral-50 sm:text-6xl leading-none">
+            <h1 className="text-3xl font-black tracking-tight text-neutral-50 sm:text-5xl lg:text-6xl leading-none">
               Cùng Nhau Kết Nối<br />
-              <span className="bg-gradient-to-r from-amber-400 via-yellow-250 to-amber-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-amber-400 via-yellow-255 to-amber-500 bg-clip-text text-transparent">
                 Cùng Nhau Thịnh Vượng
               </span>
             </h1>
             
-            <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-350 font-medium">
+            <p className="text-xs sm:text-base lg:text-lg leading-relaxed text-neutral-200 font-medium">
               Nền tảng độc quyền giúp các bạn Tân Dậu 1981 hỗ trợ chéo sản phẩm dịch vụ, xây dựng mạng lưới kinh doanh bền vững dựa trên sự tin cậy, đồng điệu và trợ lực từ Trí Tuệ Nhân Tạo (AI).
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:gap-3 pt-2 max-w-sm sm:max-w-none">
               <a
                 href="/dang-ky"
-                className="rounded-full bg-amber-500 px-6 py-3.5 text-center text-sm sm:text-base font-bold text-neutral-950 shadow-md hover:bg-amber-400 transition-all hover:scale-105"
+                className="rounded-full bg-amber-500 py-3 sm:px-6 sm:py-3.5 text-center text-[10px] sm:text-sm font-black text-neutral-950 shadow-md hover:bg-amber-400 transition-all hover:scale-103 whitespace-nowrap"
               >
                 Đăng ký gia nhập ngay
               </a>
@@ -45,7 +45,7 @@ export default async function HomePage() {
                 href="https://m.me/2571120902929642"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-neutral-800 bg-neutral-900/40 px-6 py-3.5 text-center text-sm sm:text-base font-semibold text-neutral-200 hover:bg-neutral-800 transition-colors backdrop-blur-sm"
+                className="rounded-full border border-neutral-800 bg-neutral-900/40 py-3 sm:px-6 sm:py-3.5 text-center text-[10px] sm:text-sm font-bold text-neutral-200 hover:bg-neutral-800 transition-colors backdrop-blur-sm whitespace-nowrap"
               >
                 Chat trực tiếp với AI Bot
               </a>
@@ -55,7 +55,7 @@ export default async function HomePage() {
           {/* Cột phải: Điện thoại PhoneMockup Chat động trực quan */}
           <div className="lg:col-span-5 flex justify-center mt-6 lg:mt-0 relative">
             {/* Badge trái */}
-            <div className="absolute top-10 -left-6 z-10 bg-neutral-900/90 border border-neutral-800/80 backdrop-blur-md p-3 rounded-2xl shadow-xl flex items-center gap-2 max-w-[150px] animate-bounce" style={{ animationDuration: '4s' }}>
+            <div className="hidden sm:flex absolute top-10 -left-6 z-10 bg-neutral-900/90 border border-neutral-800/80 backdrop-blur-md p-3 rounded-2xl shadow-xl items-center gap-2 max-w-[150px] animate-bounce" style={{ animationDuration: '4s' }}>
               <span className="text-lg">👥</span>
               <div>
                 <p className="text-[7px] text-neutral-500 font-extrabold uppercase tracking-wider">Mạng Lưới</p>
@@ -64,7 +64,7 @@ export default async function HomePage() {
             </div>
 
             {/* Badge phải */}
-            <div className="absolute bottom-16 -right-6 z-10 bg-neutral-900/90 border border-neutral-800/80 backdrop-blur-md p-3 rounded-2xl shadow-xl flex items-center gap-2 max-w-[150px] animate-bounce" style={{ animationDuration: '4.5s', animationDelay: '1s' }}>
+            <div className="hidden sm:flex absolute bottom-16 -right-6 z-10 bg-neutral-900/90 border border-neutral-800/80 backdrop-blur-md p-3 rounded-2xl shadow-xl items-center gap-2 max-w-[150px] animate-bounce" style={{ animationDuration: '4.5s', animationDelay: '1s' }}>
               <span className="text-lg">🛍️</span>
               <div>
                 <p className="text-[7px] text-neutral-500 font-extrabold uppercase tracking-wider">Sản Phẩm</p>
