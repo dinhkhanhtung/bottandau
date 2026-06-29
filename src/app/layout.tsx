@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bottandau.vercel.app"),
   title: "Kim Kê Connect | AI Business Network Tân Dậu 1981",
   description: "Mạng lưới kết nối giao thương và tri thức thông minh dành riêng cho cộng đồng Tân Dậu 1981. Tích hợp AI Semantic Search và AI Matching chủ động.",
   keywords: "Tân Dậu 1981, Hỗ trợ chéo Tân Dậu, Kim Kê Connect, AI Business Network, Kết nối kinh doanh 1981",
@@ -21,8 +22,16 @@ export const metadata: Metadata = {
     description: "Mạng lưới kết nối giao thương và tri thức thông minh dành riêng cho cộng đồng Tân Dậu 1981. Tích hợp AI Semantic Search và AI Matching chủ động.",
     type: "website",
     locale: "vi_VN",
-    url: "https://kimke-connect.vercel.app",
+    url: "https://bottandau.vercel.app",
     siteName: "Kim Kê Connect",
+    images: [
+      {
+        url: "/images/kimke_ai_hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Kim Kê Connect AI Network"
+      }
+    ]
   },
 };
 

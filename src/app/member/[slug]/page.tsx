@@ -65,13 +65,14 @@ export async function generateMetadata({ params, searchParams }: MemberDetailPag
   }
 
   return {
+    metadataBase: new URL("https://bottandau.vercel.app"),
     title,
     description,
     openGraph: {
       title,
       description,
       type: 'website',
-      url: `https://kimke-connect.vercel.app/member/${slug}${productId ? `?product=${productId}` : ''}`,
+      url: `https://bottandau.vercel.app/member/${slug}${productId ? `?product=${productId}` : ''}`,
       images: [
         {
           url: ogImage,

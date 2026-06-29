@@ -15,17 +15,17 @@ export default async function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Cột trái: Nội dung thuyết phục */}
           <div className="lg:col-span-7 text-left space-y-4 sm:space-y-6">
-            <div className="inline-flex rounded-full bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-400 ring-1 ring-inset ring-amber-500/20">
-              Cộng đồng Tân Dậu 1981 - Hỗ Trợ Chéo
+            <div className="inline-flex rounded-full bg-amber-500/10 px-4 py-2 text-xs font-extrabold text-amber-400 ring-1 ring-inset ring-amber-500/20 uppercase tracking-widest">
+              🐓 Tân Dậu Việt - Chắp Cánh Tình Đồng niên
             </div>
-            <h1 className="text-3xl font-extrabold tracking-tight text-neutral-50 sm:text-5xl lg:text-6xl leading-tight">
-              Mạng lưới kết nối kinh doanh{' '}
-              <span className="bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 bg-clip-text text-transparent">
-                Kim Kê Connect
+            <h1 className="text-4xl font-black tracking-tight text-neutral-50 sm:text-6xl leading-none">
+              Cùng Nhau Kết Nối<br />
+              <span className="bg-gradient-to-r from-amber-400 via-yellow-250 to-amber-500 bg-clip-text text-transparent">
+                Cùng Nhau Thịnh Vượng
               </span>
             </h1>
-            <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-300">
-              Sân chơi giao thương khép kín, nơi chia sẻ năng lực và tự động ghép nối nhu cầu kinh doanh bằng Trí tuệ Nhân tạo dành riêng cho tuổi gà 1981.
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-350 font-medium">
+              Nền tảng độc quyền giúp các bạn Tân Dậu 1981 hỗ trợ chéo sản phẩm dịch vụ, xây dựng mạng lưới kinh doanh bền vững dựa trên sự tin cậy, đồng điệu và trợ lực từ Trí Tuệ Nhân Tạo (AI).
             </p>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a
@@ -46,7 +46,25 @@ export default async function HomePage() {
           </div>
 
           {/* Cột phải: Hình ảnh thương hiệu 3D sang trọng */}
-          <div className="lg:col-span-5 flex justify-center mt-6 lg:mt-0">
+          <div className="lg:col-span-5 flex justify-center mt-6 lg:mt-0 relative">
+            {/* Badge trái */}
+            <div className="absolute -top-4 -left-4 z-10 bg-neutral-900/95 border border-neutral-800 backdrop-blur-md p-3 rounded-2xl shadow-xl flex items-center gap-2 max-w-[160px]">
+              <span className="text-xl">👥</span>
+              <div>
+                <p className="text-[8px] text-neutral-500 font-extrabold uppercase tracking-wider">Mạng Lưới</p>
+                <p className="text-[10px] font-black text-neutral-200 leading-tight">Kết Nối Đồng Niên</p>
+              </div>
+            </div>
+
+            {/* Badge phải */}
+            <div className="absolute -bottom-4 -right-4 z-10 bg-neutral-900/95 border border-neutral-800 backdrop-blur-md p-3 rounded-2xl shadow-xl flex items-center gap-2 max-w-[160px]">
+              <span className="text-xl">🛍️</span>
+              <div>
+                <p className="text-[8px] text-neutral-500 font-extrabold uppercase tracking-wider">Sản Phẩm</p>
+                <p className="text-[10px] font-black text-neutral-200 leading-tight">Ưu Tiên Tân Dậu</p>
+              </div>
+            </div>
+
             <div className="relative rounded-3xl border border-neutral-800 bg-neutral-900/25 p-3 sm:p-4 shadow-2xl backdrop-blur-md overflow-hidden hover:border-amber-500/30 transition-colors duration-500">
               <img
                 src="/images/kimke_ai_hero.png"
